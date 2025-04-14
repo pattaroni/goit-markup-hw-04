@@ -44,7 +44,11 @@ body {
 
 /* #region Header */
 .page-header {
+    background-color: var(--white);
     border-bottom: 1px solid var(--cornflower);
+    position: sticky;
+    top: 0;
+    z-index: 999;
 }
 .page-header .container {
     display: flex;
