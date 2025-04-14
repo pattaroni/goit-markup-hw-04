@@ -138,7 +138,7 @@ address {
 .section-order {
     padding: 188px 0;
     background-color: var(--navy-blue);
-    background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(/images/people-office.jpg);
+    background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(./images/people-office.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
