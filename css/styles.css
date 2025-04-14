@@ -96,7 +96,7 @@ body {
 .link-studio {
     padding: 24px 0;
     position: relative;
-    color: var(--navy-blue);
+    color: var(--ocean);
     line-height: 1.5;
     letter-spacing: 0.02em;
     font-weight: 500;
@@ -115,7 +115,7 @@ body {
     content: "";
     width: 48px;
     height: 4px;
-    border-radius: 4px;
+    border-radius: 2px;
     background-color: var(--ocean);
 }
 address {
