@@ -46,6 +46,7 @@ body {
 .page-header {
     background-color: var(--white);
     border-bottom: 1px solid var(--cornflower);
+    box-shadow: 0px 2px 1px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 1px 6px rgba(46, 47, 66, 0.08);
     position: sticky;
     top: 0;
     z-index: 999;
@@ -82,7 +83,6 @@ body {
     gap: 40px;
 }
 .link {
-    display: flex;
     padding: 24px 0;
     color: var(--navy-blue);
     line-height: 1.5;
@@ -94,10 +94,8 @@ body {
     transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .link-studio {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding-top: 24px;
+    padding: 24px 0;
+    position: relative;
     color: var(--navy-blue);
     line-height: 1.5;
     letter-spacing: 0.02em;
@@ -111,6 +109,9 @@ body {
     color: var(--ocean);
 }
 .link-studio::after {
+    position: absolute;
+    left: 0;
+    bottom: -1px;
     content: "";
     width: 48px;
     height: 4px;
@@ -140,6 +141,8 @@ address {
 
 /* #region Section Order */
 .section-order {
+    max-width: 1440px;
+    margin: 0 auto;
     padding: 188px 0;
     background-color: var(--navy-blue);
     background-image: linear-gradient(to bottom, var(--grey), var(--grey)), url(../images/people-office.jpg);
@@ -300,7 +303,7 @@ address {
     background-color: var(--ocean);
 }
 .icon-social {
-    fill: var(--white);
+    fill: var(--cloud);
 }
 
 /* #endregion Our Team */
@@ -328,12 +331,16 @@ address {
 }
 .portfolio-element {
     flex-basis: calc((100% - 48px) / 3);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.animation {
+.portfolio-element:hover {
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08), 0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+}
+.overlay {
     position: relative;
     overflow: hidden;
 }
-.overlay {
+.overlay-p {
     position: absolute;
     transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transform: translateY(100%);
@@ -342,17 +349,16 @@ address {
     width: 100%;
     height: 100%;
     background-color: var(--iris);
+    font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--cloud);
+    padding: 40px 32px;
+    height: 100%;
+    width: 100%;
 }
-.overlay p {
-    margin-top: 40px;
-    margin-left: 32px;
-    margin-right: 32px;
-}
-.portfolio-element:hover .overlay {
-    transform: translateY(0);
+.portfolio-element:hover .overlay-p {
+    transform: translateY(0%);
 }
 .portfolio .app {
     padding: 32px 16px;
@@ -380,6 +386,10 @@ address {
     padding: 100px 0;
     background-color: var(--navy-blue);
 }
+.footer .container {
+    display: flex;
+    align-items: baseline;
+}
 .footer .logo {
     display: inline-block;
     margin-bottom: 16px;
@@ -397,23 +407,30 @@ address {
     display: flex;
     gap: 120px;
 }
-.social-div ul {
-    display: flex;
-    gap: 16px;
+.logo-div {
+    margin-right: 120px;
 }
-.social-div p {
+.social-p {
     font-weight: 500;
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--white);
     margin-bottom: 16px;
 }
+.footer-list-social {
+    display: flex;
+    gap: 16px;
+}
+.social-element-footer {
+    width: 40px;
+    height: 40px;
+}
 .social-link-footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 40px;
-    height: 40px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     background-color: var(--iris);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
