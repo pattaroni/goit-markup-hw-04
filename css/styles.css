@@ -96,7 +96,7 @@ body {
 .link-studio {
     padding: 24px 0;
     position: relative;
-    color: #404bbf;;
+    color: var(--ocean);
     line-height: 1.5;
     letter-spacing: 0.02em;
     font-weight: 500;
@@ -392,7 +392,7 @@ address {
 }
 .footer .logo {
     display: inline-block;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
 }
 .logo-footer {
     color: var(--cloud);
