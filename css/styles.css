@@ -346,8 +346,6 @@ address {
     letter-spacing: 0.02em;
     color: var(--cloud);
     padding: 40px 32px;
-    height: 100%;
-    width: 100%;
 }
 .portfolio-element:hover .overlay-p {
     transform: translateY(0%);
